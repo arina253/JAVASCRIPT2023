@@ -1,0 +1,322 @@
+public class TEST4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		MotherM Sabi = new MotherM ("sita","joshi","sabita");
+		Sabi.displayGname();
+		Sabi.displayMname();
+		
+		
+		
+		SonS Sri = new SonS("sita","joshi","sabita","sri");
+		Sri.displayGname();
+		Sri.displayMname();
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
+ //1 ) INHERITANCE MULTILEVEL
+
+class GrandmotherG{
+	String firstName;
+	String lastName;
+	
+	public GrandmotherG (String fn,String ln) {
+		this.firstName = fn;
+		this.lastName = ln;
+	}
+	
+	public void displayGname() {
+		System.out.println(this.firstName + this.lastName);
+	}
+}
+
+class MotherM extends GrandmotherG{
+	String mfirstName;
+	
+	public MotherM (String fn,String ln, String mfn) {
+		super (fn,ln);
+		this.mfirstName= mfn;
+	}
+	
+	public void displayMname() {
+		System.out.println(this.mfirstName + this.lastName);
+}
+}
+
+class SonS extends MotherM{
+	String sfirstName;
+	
+	public SonS (String fn,String ln, String mfn, String sfn) {
+		super (fn,ln,mfn);
+		this.sfirstName = sfn;
+	}
+	
+	public void displaySname() {
+		System.out.println(this.sfirstName + this.lastName);
+}
+}
+
+//QUESTION 2
+
+package gitshare;
+
+public class Test4b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		ABC A = new ABC();
+		A.loan();
+		A.save();
+		A.Greet();
+
+	}
+
+} 
+
+//2) Abstract class
+
+abstract class RashtraBank{
+	
+	abstract void loan();
+	abstract void save();
+	
+	public void Greet() {
+		System.out.println("Welcome to our family");
+	}
+}
+
+class ABC extends RashtraBank{
+	
+	public void loan(){
+		System.out.println("I am loan method from ABC");
+	}
+	
+	public void save() {
+		System.out.println("I am save method from ABC");
+		
+	}
+}
+
+
+//Quetion 3
+
+package gitshare;
+
+interface RashtraBankK{
+	public void loan();
+	public void save();
+}
+
+public class Test4c {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		NIBA B = new NIBA();
+		B.loan();
+		B.save();
+
+	}
+
+}
+
+
+//3) INTERFACE
+
+class NIBA implements RashtraBankK{
+	public void loan(){
+		System.out.println("Loan method");
+	}
+	
+	public void save() {
+		System.out.println("Save method");
+		}
+	
+}
+
+Question 4)
+
+package gitshare;
+
+public class Test4d {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		OuterClass p = new OuterClass();
+		System.out.println(p.a);
+		System.out.println(p.b);
+		System.out.println(p.a + p.b);
+		
+		
+		OuterClass.InnerClass q = p.new InnerClass() ;
+		System.out.println(q.x);
+		System.out.println(q.y);
+		System.out.println(q.x + q.y);
+		
+		
+	}
+
+}
+ //4) INNER CLASS
+
+class OuterClass{
+	int a = 5;
+	int b = 10;
+	
+	class InnerClass{
+		int x = 5;
+		int y = 20;
+	}
+	
+
+}
+
+Question 5
+
+package gitshare;
+
+public class Test4e {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		Database db3=Database.getInstance();
+		db3.getConnection();
+
+	}
+
+}
+
+class Database{
+	
+	private static Database dbObject;
+	
+	private Database() {
+		
+	}
+	
+	public static Database getInstance() {
+		if (dbObject == null) {
+			dbObject = new Database ();
+		} 
+		return dbObject;
+	}
+	
+	public void getConnection() {
+		System.out.println("We are connected to database");
+	}
+}
+
+
+Question 6
+
+package gitshare;
+
+public class Test4f {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Calculator.multiplication (2,4);
+		Calculator.multiplication (2,4,6);
+		Calculator.multiplication (2,4,6,8);
+		
+		
+
+	}
+
+}
+
+//6) Overloading
+
+class Calculator{
+	
+	public static void multiplication (int a, int b) {
+		System.out.println(a * b);
+	}
+	
+	public static void multiplication (int a, int b, int c) {
+		System.out.println(a * b *c);
+	}
+	
+	public static void multiplication (int a, int b, int c,int d) {
+		System.out.println(a * b * c *d);
+	}
+}
+
+
+Question 7
+
+package gitshare;
+
+public class Test4g {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		MBA A = new MBA("xyz","kathmandu","newroad");
+		A.deposit();
+		A.withdraw();
+		System.out.println(A.name);
+		System.out.println(A.location);
+		System.out.println(A.branch);
+
+	}
+
+}
+
+//7) Overriding
+
+class BankK{
+	String name;
+	String location;
+	
+	public BankK( String nm,String ln) {
+		this.name = nm;
+		this.location= ln;
+	}
+	
+	public void withdraw() {
+		System.out.println("Withdraw method");
+	}
+	
+	public void deposit() {
+		System.out.println("Deposit method");
+	}
+}
+
+class MBA extends BankK{
+	 String branch;
+	 
+	 public MBA(String nm, String ln, String br) {
+			super(nm, ln);
+			this.branch = br;
+			}
+	 
+	 public void withdraw() {
+		 System.out.println("Withdraw method from MBA");
+	 }
+	 
+	 public void deposit() {
+		 System.out.println("Deposit method from MBA");
+	 }
+}
+
+
+
+

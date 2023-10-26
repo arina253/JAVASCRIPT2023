@@ -1,0 +1,52 @@
+let arina = {
+    firstName : "arina",
+    lastName : "joshi",
+    age : 40,
+    rollNo : 32
+}
+
+let ram = {
+    firstName : "ram",
+    lastName : "shrestha",
+    age : 30,
+    rollNo : 3
+
+}
+
+//100 object--------400 lines
+
+//Program 1 : without constructor
+
+class Person{
+    firstName;
+    lastName;
+    age;
+    rollNo;
+}
+
+let arinaa = new Person()
+console.log(arinaa)
+arinaa.firstName = "arinaA"
+arinaa.lastName = "joshi"
+arinaa.age = 40
+arinaa.rollNo = 32
+console.log(arinaa)
+
+//Program 2: with constructor
+
+class PersonB{
+
+    constructor(fn,ln,age,rollNo,skills){
+        this.firstName = fn
+        this.lastName = ln
+        this.age = age
+        this.rollNo = rollNo
+        this.skills = skills 
+    }
+}
+
+let ramb = new PersonB("ramb","shresthab", 23,45,["html","css"])
+let arinab = new PersonB("arinab","joshib",40,23, ["js","python"])
+
+console.log(ramb)
+console.log(arinab)

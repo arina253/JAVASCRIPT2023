@@ -1,0 +1,124 @@
+
+//Program 1
+
+let birthYear = [2000,2001,2002,2003]
+//[23,22,21,20]
+
+let q1 = birthYear.map(function(el,index,arr){
+    return 2023-el
+})
+console.log (q1)
+
+
+//Program 2
+
+let marks = [55,66,22,33,44,55,66,77]
+//[66,66,77]
+
+let q2 = marks.filter(function(el){
+     return el > 55
+})
+console.log(q2)
+
+
+//Program 3
+
+let arr = [11,22,33]
+
+let q3 = arr.reduce(function(acc,el,ind,arr){
+    return acc + el
+
+},0)
+console.log (q3)
+
+
+//Program 4
+
+let cities =["pokhara","kathmandu","butwal","surkhet"]
+
+let q4 = cities.forEach(function(el,ind,arr){
+console.log ("welcome" + el)
+})
+
+
+//Program 5
+
+let transactions = [44,-55,22,44,88,-45]
+//[-55,-45]
+
+let q5 = transactions.filter (function(el){
+    
+    return el < 0
+})
+console.log (q5)
+
+
+//find()----to search through an array and return the first element that satisfies a given condition. 
+//      --- If no element satisfies the condition, it returns undefined.
+
+
+//Program 6
+
+let q6 = transactions.find(function(el){
+    return el < 0
+})
+console.log(q6)
+
+
+// findIndex()-----it returns the index of the first element that satisfies the condition.
+ //          ------If no element satisfies the condition, it returns -1.
+
+
+ //  Program 7
+
+let q7 = transactions.findIndex(function(el,ind,arr){
+    return el < 0
+})
+console.log (q7)
+
+
+//every()---- to check if all elements in an array satisfy a given condition.
+// The every() function returns true if all elements pass the condition, and false if at least one element does not meet the condition.
+
+//Program 8
+
+let a = [11,22,33,55,98,678,567,123]
+
+let q8 = a.every(function(el){
+    return el > 100
+
+})
+console.log (q8)
+
+
+//some()----to check if at least one element in the array satisfies a given condition. 
+//     The some() function returns true if at least one element passes the condition, and false if none of the elements meet the condition.
+
+//Program 9
+
+let b = [11,22,33,55,98,678,567,123]
+
+let q9 = b.some(function(el){
+    return el > 100
+})
+console.log (q9)
+
+
+/*********************************************************************************************************************************/
+
+
+// Methods - Return type
+// map() - array
+// filter() - array 
+// reduce() - value
+// forEach() - undefined
+// find() - first occurence
+// findIndex() - index value of first occurence
+// every() - boolean
+// some() - boolean()*/
+
+
+
+
+
+

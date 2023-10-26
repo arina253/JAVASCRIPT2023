@@ -1,0 +1,156 @@
+// Es6 class
+
+//class -blue print======> format =====> value change
+
+// -Without constructor
+// -With constructor
+// -By using function
+// -Get and set keyword
+
+//Program 1
+//Without constructor
+
+class Person{
+    firstName
+    lastName
+    age
+    rollNo
+    displayName(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+
+let amol = new Person()
+console.log(amol)
+
+amol.displayName()     //NaN(Not a number)
+amol.firstName = "amol R"
+amol.lastName = "rao"
+amol.age = 13
+amol.rollNo = 45
+
+console.log(amol)
+amol.displayName()
+
+
+//Program 2
+//with constructor
+
+class PersonB{
+    constructor (fn,ln,age,rollNo){
+        this.firstName = fn
+        this.lastName = ln
+        this.age = age
+        this.rollNo = rollNo
+    }
+
+    displayName(){
+        console.log(this.firstName +this.lastName)
+    }
+}
+
+let amolB = new PersonB("amolB","raoB", 35,46)
+console.log(amolB)
+amolB.displayName()
+
+
+//Program 3
+//By using function
+
+class PersonC{
+
+    setFirstName(fn){
+        this.firstName = fn
+    }
+
+    setLastName(ln){
+        this.lastName = ln
+    }
+
+    setAge(ag){
+        this.age = ag
+    }
+
+    setRollNo(rn){
+        this.rollNo = rn
+    }
+}
+
+    let amolC = new PersonC()
+    console.log(amolC)
+
+    amolC.setFirstName("amolC")
+    amolC.setLastName("raoC")
+    amolC.setAge(34)
+    amolC.setRollNo(12)
+
+    console.log(amolC)
+
+
+    //Program 4
+    //Using get and set keyword
+
+    let info = {
+        firstName : "amol",
+        lastName : "rao"
+    }
+
+    console.log(info.firstName)
+    info.firstName = "chinmay"
+    console.log(info)
+
+
+    class PersonD{
+        set setFirstName(fn){
+            this.firstName = fn
+        }
+        
+        set setLastName(ln){
+            this.lastName = ln
+        }
+
+        set setAge(ag){
+            this.age = ag
+        }
+
+        set setRollNo(rn){
+            this.rollNo = rn
+        }
+
+       get setFirstName(){
+        return this.firstName
+       }
+
+       get setLastName(){
+        return this.lastName
+       }
+
+       get setAge(){
+        return this.age
+       }
+
+       get setRollNo(){
+        return this.rollNo
+       }
+    }
+
+    let amolD = new PersonD()
+    amolD.setFirstName = "amolD"
+    amolD.setLastName = "raoD"
+    amolD.setAge = 32
+    amolD.setRollNo = 31 
+
+    console.log(amolD)
+    console.log(amolD.setFirstName)
+
+
+
+
+
+
+
+
+
+
+
+

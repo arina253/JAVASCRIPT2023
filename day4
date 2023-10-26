@@ -1,0 +1,110 @@
+// if------else
+
+// numT > 0 && numT <= 5  ======> 10 % discount
+// numT > 5 && numT <= 10 ======> 20 % discount
+// numT > 10              ======> 30 % discount
+
+// if(condition){
+//    // statement
+// }
+
+//Program 1
+
+let numT = 9
+
+if (numT > 0 && numT <= 5){
+    console.log("10% discount")
+}
+
+if (numT > 5 && numT <= 10){
+    console.log ("20% discount")
+    
+}
+
+if (numT > 10){
+    console.log ("30% discount")
+}
+
+
+//Program 2
+
+let numTa = -9
+
+if (numTa > 0 && numTa <= 5){
+    console.log("10% discount")
+}
+
+else if (numTa > 5 && numTa <= 10){
+    console.log ("20% discount")
+}
+
+else if (numTa > 10) {
+    console.log ("30% discount")
+}
+
+else{
+    console.log("incorrect input")
+
+}
+
+
+//Program 3
+
+let marks = 7
+
+if (marks > 95){
+    console.log ("Grade A")
+}
+if (marks > 65){
+    console.log ("Grade B")
+}
+if (marks > 55){
+    console.log ("Grade C")
+}
+
+
+//Program 4
+
+let marks1 = 65
+
+if (marks1 > 95){
+    console.log ("Grade A")
+}
+ else if (marks1 > 65){
+    console.log ("Grade B")
+}
+else if (marks1 > 55){
+    console.log ("Grade C")
+}
+else{
+    console.log ("Fail")
+}
+
+
+//Program 5
+
+let a = 50
+let b = 70
+
+if (a > b){
+    console.log("a is greater")
+}
+else{
+    console.log("b is greater")
+}
+
+
+
+//Ternary operator
+
+a > b ? console.log ('a is greater'): console.log ('b is greater')
+
+a > b ? "a is greater": "b is greater"
+
+//Program 6
+
+let age = 170
+
+let q2 = age >= 18 ? "can drive": "cannot drive"
+console.log (q2)
+

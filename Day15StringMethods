@@ -1,0 +1,177 @@
+//String-----Object ------Properties and Methods
+
+let firstName = "arina"
+console.log (firstName)
+console.log (typeof firstName)
+
+//length----property
+
+   let city1 = "Kathmandu"
+   console.log (city1.length)
+
+//toUpperCase()
+
+let city2 = "Pokhara"
+let q2 = city2.toUpperCase()
+
+//toLowerCase()
+
+let city3 = "Bhaktapur"
+let q3 = city3.toLowerCase()
+console.log (q3)
+
+//startsWith()
+
+let city4 = "hyderabad"
+let q4 = city4.startsWith ("H")
+let q5 = city4.startsWith ("hyd")
+console.log(q4)
+console.log (q5)
+
+//endsWith()
+
+let city5 = "janakpur"
+let q6 = city5.endsWith ("r")
+let q7 = city5.endsWith ("kpur")
+console.log(q6)
+console.log(q7)
+
+
+//includes()
+
+let city6 = "yetkha"
+let q8 = city6.includes ("t")
+let q9 = city6.includes ("tkh")
+console.log (q8)
+console.log (q9)
+
+
+//trim()
+
+let city7 = " goa "
+let q10 = city7.length
+console.log(q10)
+let q11 = city7.trim()
+console.log (q11)
+console.log (q11.length)
+
+
+//trimStart()
+
+let city8 = " goa"
+console.log (city8.length)
+let q12 = city8.trimStart()
+console.log (q12.length)
+
+
+//trimEnd()
+
+let city9 = "goa "
+console.log (city9.length)
+let q13 = city9.trimEnd()
+console.log (q13.length)
+
+
+//0     //1     //2     //3     //4     //5
+//j     a        i      p       u       r
+
+let city10 = "jaipur"
+let q14 = city10.indexOf("i")
+let q15 = city10.indexOf ("A")
+console.log (q14)
+console.log(q15)
+
+
+//replace()
+
+let infoa = "I am learning javascript"
+let infob = infoa.replace("javascript","python")
+console.log (infob)
+
+
+//lastIndex()
+
+//          012345
+let info = "I am learning java and also learning sql"
+let q16 = info.indexOf ("learning")
+let q17= info.lastIndexOf ("learning")
+console.log (q16)
+console.log (q17)
+
+
+
+//charAt()
+
+let city17 = "chandrapur"
+ let q18 = city17.charAt(0)
+
+ for (let i = 0; i < city17.length; i++){
+    //console.log (i)
+    //console.log (city17[i])
+    console.log (city17.charAt(i))
+ }
+
+
+ //Difference between city17[i] & city17.charAt(i)
+
+ //city[i] treats the string as an array and allows for both reading and modifying characters
+//while city.charAt(i) is a read-only method for accessing characters at a specific index.
+
+
+//concat()
+
+let str1 = "arina"
+let str2 = "joshi"
+let q20 = str1.concat (str2)
+let q22 = str1.concat (" ").concat (str2)
+console.log (q20)
+console.log (q22)
+
+
+//slice()
+
+let city0 = "chandrapur"
+
+// 0     1   2   3   4   5   6   7   8   9
+//c      h   a   n   d   r   a   p   u   r
+//-10   -9  -8  -7  -6  -5  -4  -3  -2  -1
+
+//.slice(startIndex, endIndex (not inclusive))
+
+console.log (city0.slice(2))
+console.log (city0.slice(2,6))
+console.log (city0.slice(-6,6))
+console.log (city0.slice(1,-1))
+console.log (city0.slice(-8,-1))
+console.log (city0.slice(-1,-8))   //no output
+console.log (city0.slice(-2,6))   // no output
+
+
+//substring()
+
+//  0   1   2   3   4   5
+//  b    h   o   p   a   l
+
+let city20 = "bhopal"
+let q31 = city20.substring(1,4)
+let q32 = city20.substring(0,5)
+console.log (q31)
+console.log (q32)
+
+
+//substr()
+
+// 0     1     2     3     4     5
+// b     h     o     p     a     l
+
+let city21 = "bhopal"
+//city21.substr(startIndex,numberOfCharacter)
+
+let q33 = city21.substr(1,4)
+console.log(q33)
+
+
+
+
+
+

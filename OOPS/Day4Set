@@ -1,0 +1,28 @@
+//Set
+
+//Defining a set with array
+
+let arrayA = ["arina","jyoti","amol","arina"]
+console.log(arrayA)         //[ 'arina', 'jyoti', 'amol', 'arina' ]
+
+let setA = new Set(arrayA)
+console.log(setA)           //Set(3) { 'arina', 'jyoti', 'amol' }
+
+//Defining a blank set
+
+let setB = new Set()
+console.log(setB)         //Set(0) {}
+
+setB.add ("pune")
+setB.add("hyderabad")
+setB.add("delhi")
+console.log(setB)
+
+let setC = new Set(["a","b","c","d","e"])
+console.log(setC)
+
+setB.delete ("hyderabad")
+console.log(setB)
+
+setB.clear()
+console.log(setB)

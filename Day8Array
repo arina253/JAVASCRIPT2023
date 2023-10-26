@@ -1,0 +1,139 @@
+
+//ARRAY
+
+let x = 10;
+console.log(x)
+
+
+//Program 1
+
+
+//             0      1     2      3       4
+let names = ["ram","sam","komal","mohan","hari"]
+console.log (names[0])
+console.log (names[1])
+
+
+//Program 2
+
+for (let i = 0; i < names.length; i++){
+    console.log(i)
+    console.log(names[i])
+}
+
+
+//Program 3
+
+for (let i = 4; i >= 0; i--){
+    console.log(i)
+    console.log(names[i])
+}
+
+
+//Program 4
+
+let cities = ["pune","bangalore","kolkata"]
+console.log (cities[0])
+
+//while loop
+let j = 0
+while (j <= 2){
+    console.log (j)
+    console.log (cities[j])
+    j++
+}
+
+
+//Program 5
+
+let j1 = 2
+while (j1 >= 0){
+    //console.log(j)
+    console.log (cities[j1])
+    j1--
+}
+
+
+//In Javascript,everything is object.
+//Object------Properties and method
+
+//Human-------Chinmay
+//Properties-age,weight,height,age
+//Method:talk(),walk()
+
+//ARRAY METHODS
+
+//length
+
+let state = ["MH","RJ","GOA","MP","UP"]
+console.log(state[0])
+let q1 = state.length
+console.log (q1)
+
+//Gym
+//action --------> exercise
+//return --------> health
+
+//push ()-------add element to the last of array-----Return: new length
+
+let fruits = ["apple","mango","banana"]
+let q2 = fruits.push("grapes")
+console.log(q2)
+console.log (fruits)
+
+
+//unshift()--------add element to the front of array-------Return: new length
+
+let q3 = fruits.unshift ("papaya")
+console.log(q3)
+console.log (fruits)
+
+
+//shift()---------remove first element of array---------Return: same element
+
+let names2 = ["ram","sam","tom","pita"]
+q4 = names2.shift()
+console.log (q4)
+console.log(names2)
+
+
+//pop()---------remove last element of array---------Return: same element
+
+let q5 = names2.pop()
+console.log(q5)
+console.log(names2)
+
+
+//includes()--------checks if particular element present------Return: boolean
+
+let country = ["nepal","india","china","pakistan"]
+let q6 = country.includes("pakistan")
+console.log (q6)
+
+
+//indexOf()
+
+let q7 = country.indexOf("pakistan")
+let q8 = country.indexOf ("Pakistan")//case sensitive language, returns -1
+console.log(q7)
+console.log(q8)
+
+
+//reverse()
+
+let numbers = [11,22,33,44,55]
+let q9 = numbers.reverse()
+console.log(q9)
+
+
+// length 
+// push()  --- new length
+// unshift() --- new length
+// pop()   ---- lastElement
+// shift()  ---- firstName
+// includes()  --- boolean value 
+// indexOf() ----- int
+// reverse() -----
+
+
+

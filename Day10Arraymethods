@@ -1,0 +1,108 @@
+
+//Program 1-Age calculation using loop and map
+
+//Loop approach
+
+let birthYear = [1989,1990,1991,1992]
+let ages = []
+    //[34,33,32,31]
+
+    for (let i = 0; i <birthYear.length; i++){
+        //console.log(i)
+        //console.log(birthYear[i])
+        // console.log (2023-birthYear[i])
+        let c1 = 2023-birthYear[i]
+        ages.push(c1)
+    }
+    console.log(ages)
+
+
+    //map approach
+
+
+    //map(callbackFunction): Creates a new array with the results of calling a provided function on every element in the array.
+
+    //birthYear = [1989,1990,1991,1992]
+    let q1 = birthYear.map(function (el,index,arr){
+        //console.log(el,index,arr)
+        return 2023 - el
+    })
+    console.log (q1)
+
+
+    //Program 2 -  Filtering Marks Above 50 using Loop and Filter
+
+    //Loop approach
+
+    let marks =[55,66,33,44,77]
+    let above50 = []  
+    //[55,66,77]
+
+    for (let i = 0; i < marks.length; i++){
+    console.log(i)
+    console.log (marks[i])
+    if (marks[i]> 50){
+        above50.push(marks[i])
+    }
+}
+console.log (above50)
+
+//Filter approach
+
+//filter(callbackFunction): Creates a new array with all elements that pass the test implemented by the provided function.
+
+let q2 = marks.filter(function(el,index,arr){
+    return el > 50
+})
+console.log(q2)
+
+
+//Program 3-Separating Transactions into Withdrawals and Deposits using Filter
+
+let transactions = [-100,400,-40,100,600,-60]
+let withdrawal = transactions.filter(Function(el){
+    return el < 0
+})
+console.log(withdrawal)
+
+
+let deposit = transactions.filter(function (el){
+       return el > 0
+})
+console.log(deposit)
+
+
+//Program 4- Totaling Marks using Loop
+
+let marks = [11,22,33]
+let total = 0
+
+for (let i = 0; i <marks.length; i++){
+    total = total + marks[i]
+    //  0   +  11 ------> 11
+   //  11   +  22 ------> 33
+   //  33   +  33 ------> 66
+}
+console.log(total)
+
+// Program 5-Totaling Marks using Reduce
+//reduce(callbackFunction, initialValue): Applies a function against an accumulator and each element in the array to reduce it to a single
+// value.
+
+let q3 = marks.reduce(function(acc,el,index,arr){
+   return acc + el
+},0)
+console.log (q3)
+
+/*The reduce method is called on the marks array. 
+It takes a callback function as its first argument. 
+The callback function takes four parameters:
+
+acc: The accumulator, which stores the accumulated result during each iteration.
+el: The current element being processed in the array.
+index: The index of the current element in the array.
+arr: The original array being traversed.
+The initial value for the accumulator is 0, as specified in the reduce method call.*/
+
+HINT:
+function(){} - write it all at once for easy operation.

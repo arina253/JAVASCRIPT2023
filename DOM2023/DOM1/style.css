@@ -1,0 +1,13 @@
+h1{
+    color :  red;
+    background :  black;
+} 
+
+p{
+    color : black;
+    background :  red;
+}
+
+
+
+//link stylesheet to html to reflect the things written in style.css.----Type link and press tab

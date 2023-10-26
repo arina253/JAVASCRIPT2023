@@ -1,0 +1,96 @@
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+
+//for (initialization ; conditionCheck ; increment/decrement){
+    // statement
+//}
+
+
+//Program to print hello 3 times
+
+for (let i = 1; i <=3 ; i++){
+    console.log("hello")
+}
+
+
+//Program to print 1 to 3
+
+for (let i = 1; i <=3 ; i++){
+    console.log (i)
+}
+
+
+//Program to print 1 to 5
+
+for (let i = 1; i <=5; i++){
+    console.log(i)
+}
+
+
+//Program to print 5 to 1
+
+for (let i = 5; i >= 1; i--){
+    console.log(i)
+}
+
+
+//Program to print table of 2
+
+for (let i = 2; i <= 20; i = i + 2) {
+    console.log(i);
+}
+
+
+//Program to print table of 5 in reverse
+
+for (let i = 50; i >= 5; i = i-5){
+    console.log (i)
+}
+
+
+//for with break statement
+
+for (let i = 1; i <= 5; i++){   //2 //3
+    if (i == 3){
+        break
+    }
+    console.log(i)  //1 //2
+}
+
+
+for (let i = 1; i <= 5; i++){  //2 //3
+    console.log(i)  //1 //2 //3
+    if (i == 3){
+        break
+    }
+}
+
+
+for (let i = 5; i >= 1; i--){ //5 //4 //3
+    console.log(i)  //5 //4 //3
+    if (i == 3){
+        break;
+    }
+}
+
+
+//for with continue statement 
+
+for (let i = 1; i <= 5; i++){  //2 //3 //4 //5 //6
+    if (i == 3){
+        continue                                //continue: go to the next iteration
+    }
+    console.log (i)  //1 // 2 //4 //5
+
+
+for (let i = 5; i >= 1; i--){  //4 //3 //2 //1 //0
+    if (i == 3){
+        continue
+    }
+    console.log(i)  //5 //4 //2 //1
+}
+
+}

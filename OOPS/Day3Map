@@ -1,0 +1,130 @@
+//Map
+
+// let x = 10
+// let y = true
+// let first_name = "arina"
+// let names = ["arina","jyoti","roshini"]
+// let info = {
+//     first_name = "arina",
+//     last_name = "joshi"
+
+//     let mapA = new Map()
+//     let mapB = new Map(
+//         [1,"arina"],
+//         [2,"jyoti"],
+//         [3,"Roshini"]
+
+        //Map stores the value in the form of key or property and value.
+        //key : value; 
+        //property : value
+
+        //Difference between object and Map
+
+        //Object keys or properties are always string
+        //Map keys can be of any data type
+
+        //There are two ways of defining map
+
+        let mapC = new Map();
+        console.log(mapC)
+
+        let mapD = new Map([
+            [1,"admin"],
+            [2, "support"],
+            [3, "manager"]
+        ])
+
+        //size of Map
+        let q1 = mapD.size
+        console.log(q1)
+
+        //set()
+        mapD.set(4,"customer support")
+        console.log(mapD)
+
+        //get()
+        let q2 = mapD.get(1)
+        console.log(q2)
+
+        //has()
+        let q3 = mapD.has(4)
+        console.log(q3)
+
+        let q4 = mapD.has(40)
+        console.log(q4)
+
+        //clear()
+        // mapD.clear()
+        // console.log(mapD)
+
+        //delete
+        let q5 = mapD.delete(2)
+        console.log(mapD)
+
+        //forEach
+        mapD.forEach(function(v,k){
+            console.log (v , k)
+        })
+
+        for (let key of  mapD.keys()){
+            console.log(key)
+        }
+
+        for (let val of mapD.values()){
+            console.log(val)
+
+            for (let[k,v]of mapD.entries()){
+                console.log(k,v)
+            }
+        }
+
+        
+        //Program 2
+
+        let mapE = new Map()
+        let mapF = new Map([
+            ["fullName","arina"],
+            [true,"can drive"],
+            [1,"role"]
+        ])
+         console.log(mapE)
+         console.log(mapF)
+
+         console.log(mapF.size)
+
+         mapF.set (2,"customer")
+         console.log(mapF)
+
+         mapF.get(2)
+         console.log(mapF.get(2))
+
+        console.log(mapF.delete(2))
+
+         //console.log(mapF.clear())
+         let a1 = mapF.has(1)
+         console.log(a1)
+
+         mapF.forEach(function(v,k,m){
+            console.log(v,k,m)
+         })
+
+       for(let key of mapF.keys()){
+        console.log(key)
+       }
+
+       for(let val of mapF.values()){
+        console.log(val)
+       }
+
+       for (let [k,v]of mapF.entries()){
+        console.log(k,v)
+       }
+
+
+
+
+
+
+        
+
+    

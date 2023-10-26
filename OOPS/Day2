@@ -1,0 +1,127 @@
+//object literal
+
+let amol = {
+    firstName : "amol",
+    lastName : "rao",
+    age : 29,
+    rollNo : 40
+}
+
+let chinmay = {
+    firstName :  "chinmay",
+    lastName : "deshpande",
+    age : 34,
+    rollNo : 54
+}
+
+//100 object----400 lines
+
+//Program 1
+class PersonQ{
+    firstName;
+    lastName;
+    age;
+    rollNo
+}
+
+let Rita = new PersonQ()
+console.log(Rita)
+Rita.firstName = "Rita",
+Rita.lastName = "joshi",
+Rita.age = 30,
+Rita.rollNo = 8
+console.log(Rita)
+
+class PersonQ2{
+    constructor(fn,ln,ag,rollNo){
+        this.firstName = fn
+        this.lastName = ln
+        this.age = ag
+        this.rollNo = rollNo
+    }
+
+    display(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+
+let Ram2 = new PersonQ2 ("ram","joshi",20,35)
+let Sita2 = new PersonQ2 ("sita","rao",32,54)
+let Hari2 = new PersonQ2("Hari","shakya",21,45)
+
+console.log(Ram2)
+console.log(Sita2)
+console.log(Hari2)
+
+Ram2.display()
+Sita2.display()
+
+//Retrieve-dot notation and bracket notation
+
+console.log(Ram2.lastName)
+console.log (Ram2['lastName'])
+
+Ram2.lastName = "shrestha"
+Ram2['lastName'] = "shrestha"
+console.log(Ram2)
+
+Ram2.city = "Kathmandu"
+console.log(Ram2)
+console.log(Sita2)
+
+delete Ram2.firstName
+console.log(Ram2)
+
+
+//Program 2
+//Create five objects
+
+let students = [
+    new PersonQ2("amol1","rao1",31,23),
+    new PersonQ2("amol9","rao9",30,29),
+    new PersonQ2("amol3","rao3",38,21),
+    new PersonQ2("amol4","rao4",30,28)
+    
+]
+
+//Retrieving
+
+// students [0].display()
+// students [1].display()
+// students [2].display()
+// students [3].display()
+
+students.forEach(function(el){
+    el.display()
+})
+
+class PersonQ3{
+    setFirstName (fn){
+        this.firstName = fn
+    }
+
+    setLastName(ln){
+        this.lastName = ln
+    }
+
+    setAge(ag){
+        this.age = ag
+    }
+
+    setRoll (rollNo){
+        this.rollNo = rollNo
+    }
+}
+
+let Ram3 = new PersonQ3()
+console.log(Ram3)
+
+Ram3.setAge(20)
+Ram3.setFirstName("Ram")
+Ram3.setLastName("joshi")
+Ram3.setRoll(12)
+console.log(Ram3)
+
+
+
+

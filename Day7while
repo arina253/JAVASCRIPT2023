@@ -1,0 +1,105 @@
+//while loop
+
+//initialization
+//while(condition check){
+    //statement
+    //increment/decrement
+//}
+
+//Program 1
+//Print hello 3 times
+
+let t1 = 1;
+while (t1 <= 3){
+    console.log("hello")
+    t1++
+}
+
+//Program 2
+//Print 1 to 3
+
+let t2 = 1;
+while(t2 <=3){
+    console.log (t2)
+    t2++
+}
+
+//Program 3
+//Print 1 to 5
+
+let t3 = 1
+while (t3 <= 5){
+    console.log(t3)
+    t3++
+}
+
+//Program 4
+//Print 5 to 1
+
+let t4 = 5
+while (t4 >= 1){
+    console.log(t4)
+    t4--
+}
+
+
+//Program 5
+//Table of 2
+
+let t5 = 2
+while (t5 <= 20){
+    console.log (t5)
+    t5 = t5 + 2
+}
+
+
+//Program 6
+//Table of 5 in reverse
+
+let t6 = 50;
+while (t6 >= 5){
+    console.log (t6)
+    t6 = t6 - 5
+}
+
+
+//Program 7
+//break with while loop
+
+let t7 = 5
+while (t7 >= 1){
+    if (t7 == 3){
+        break
+    }
+    console.log (t7)
+    t7--
+}
+
+
+//Program 8
+
+let t8 = 1
+while (t8 <= 5){
+    console.log(t8)
+    if (t8 ==3){
+        break
+    }
+    t8++
+}
+
+
+//Program 9
+//continue with while loop
+
+let t9 = 1
+while (t9 <= 5){
+ 
+    if (t9 == 3){
+        t9++ //4
+        continue
+    }
+    console.log(t9) //1 //2 //4 //5
+    t9++ //2 //3 //4 //5 //6
+}
+
+

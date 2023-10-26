@@ -1,0 +1,94 @@
+//lexical scope
+//Lexical scope in JavaScript refers to the scope of a variable being
+// determined by its location in the source code during the compile
+ //phase, allowing inner functions to access variables from their 
+ //containing (enclosing/outer) functions.
+
+// function addition(){
+//     let a = 10
+//     let b = 5
+//     console.log(a + b)    //15
+//    // console.log(x + y) // no output  
+//    // Variables defined in an inner scope is not  available to outer scopes
+
+//     function addition2(){
+//         let x = 8
+//         let y = 4
+//         console.log(a+b)   //15   // Variables defined in an outer scope are available to inner scopes
+//         console.log(x +y)  //12
+
+//         function addition3(){
+//             console.log(a + b + x + y)    //27
+//         }
+//         addition3()
+//     }
+
+//     addition2()
+// }
+
+// addition()
+
+// //return()
+// //It is used to exit the function and pass a value back from a function 
+// //to the caller.
+
+// function addition3(){
+//     let a = 10
+//     let b = 20
+//     console.log(a + b)
+//     return "hello"
+//     console.log("bye")
+// }
+
+// let q1 = addition3()
+// console.log(q1)      //bye will not print since "return" close the function
+
+
+// //closure()
+
+// //Program 1
+// a function as a parameter to other function
+
+// function multiplication(){
+//     let a = 10
+//     let b = 5
+
+//     return function(){
+//         return a + b
+       
+//     }
+// }
+
+// let q2 = multiplication()
+// // let q2 = function (){
+// //     return a + b
+// // }
+// console.log(q2())
+
+//Program 2
+
+function subtraction(){
+    let a = 10
+    let b = 5
+    
+    return function(){
+        return a-b
+    }
+}
+
+let q3 = subtraction()
+// let q3 = function(){
+    //     return a-b
+    // }
+console.log(q3())
+
+//Closures are powerful in JavaScript and are commonly used for data
+// encapsulation, creating private variables, and implementing various design patterns
+
+//a closure is a function that retains access to variables from its
+// containing (enclosing) function's scope even after the outer 
+//function has finished executing.
+
+
+
+

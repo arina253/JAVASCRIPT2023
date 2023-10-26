@@ -1,0 +1,108 @@
+
+//Array of objects
+
+let students = [
+    {
+        firstName : "arina",
+        lastName : "joshi",
+        age : 32,
+        skills :["python","java","javascript"]
+    },
+    {
+        firstName : "amol",
+        lastName : "rao",
+        age : 30,
+        skills :["seleniumn","java","sql"]
+    },
+    {
+        firstName : "sarika",
+        lastName : "pansare",
+        age : 30,
+        skills :["javascript","java","selenium","cypress"]
+    },
+    {
+        firstName : "jyoti",
+        lastName : "pradhan",
+        age : 26,
+        skills :["python","java","sql","excel","javascript","selenium"]
+    }
+]
+
+console.log(students[0].firstName)
+
+
+//Program 1------Print only the firstName
+
+students.forEach(function(el,index,arr){
+    console.log (el)                  // gives object
+    console.log(el.firstName)        // gives first name of each object
+})
+
+
+//Program 2 ------Print firstName and lastName
+
+students.forEach(function(el){
+console.log (el.firstName + " " +  el.lastName)
+})
+
+
+//Program 3 ------Print firstName and the number of skills they acquire----name of student : number of skills
+
+students.forEach(function(el){
+    console.log (el.firstName + el.skills.length)
+
+})
+
+
+//Program 4 ------Add "prompt engineer" at the back of each persons skill
+
+students.forEach(function(el){
+    el.skills.push ("prompt engineer")
+})
+console.log (students)
+
+
+//Program 5 -----Print names of students whose age>30
+
+students.forEach(function(el){
+    if (el.age > 30){
+        console.log(el.firstName)
+    }
+
+})
+
+
+//Program 6------Print user with python skills
+
+//Method1
+
+students.forEach(function(el){
+    if (el.skills. includes ("python")){
+        console.log(el.firstName)
+        console.log ("*************")
+
+    }
+    
+})
+
+// //Method2
+
+// let q1 = students.filter(function(el){
+//     el.skills.includes("python")
+// })
+
+// console.log (q1)
+// q1.forEach(function(el){
+//     console.log(el.firstName)
+// })
+
+
+
+//Program 7 ------Print name of students with age =30 and should have skill as javascript
+
+students.forEach(function(el){
+    if (el. age ==30  && el.skills.includes("javascript")){
+        console.log (el.firstName)
+    }
+
+})

@@ -1,0 +1,81 @@
+//String
+
+//Program 1
+let firstName = "arina"
+console.log(firstName)
+
+let lastName = "joshi"
+console.log(lastName)
+
+let middleName = 'man'
+console.log(middleName)
+
+console.log(typeof firstName)
+console.log(typeof lastName)
+console.log(typeof middleName)
+
+
+//Program 2
+
+let firstN = "arina"
+let lastN = "joshi"
+
+//"My first name is Arina and last name is Joshi"
+
+console.log ("My first name is " + firstN + " and last name is " + lastN)
+
+// //String interpolation
+console.log(`My first name is ${firstN}and last name is ${lastN}`)
+
+
+//Program 3
+
+//string + string ----------> string
+//number + string ----------> string
+//string + number ---------->string
+//number + number ----------> number
+
+let a = 10
+let b = 5
+let c = "hello"
+
+console.log (a + b + c)
+//number + number + string
+  //number + string
+   //string //15hello
+
+
+   //Program 4
+
+   console.log (c + a + b)
+   //string + number + number 
+    //string + number  //"hello10" + 5
+    // string //"hello105"
+
+    console.log (b + c + a)    //5hello10
+
+
+    //Loop over string
+
+    let city = "pune"
+
+    //0   1   2   3
+   // p   u   n   e
+
+   console.log(city[0])
+   console.log (city[2])
+
+   //String stores the value by index
+
+   for (let i = 0; i < 4 ; i++) {
+    //console.log (i)
+    console.log (city[i])
+   }
+
+   for (let i = city.length-1; i >= 0; i--){
+    console.log (i)
+    console.log (city[i])
+   }
+
+
+   

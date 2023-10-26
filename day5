@@ -1,0 +1,99 @@
+// switch
+//switch case without break statement
+
+//Program 1
+
+let city = "taumadhi"
+switch (city){
+case "sanepa":
+console.log("Lalitpur")
+case "taumadhi":
+console.log ("Bhaktapur")
+case "newroad":
+console.log ("Kathmandu")
+default:
+console.log("Incorrect city")
+
+}
+
+//switch case with break statement
+
+//Program 2
+
+let city1 = "taumadhi"
+switch (city1){
+case "sanepa":
+console.log("Lalitpur")
+break;
+case "taumadhi":
+console.log ("Bhaktapur")
+break;
+case "newroad":
+console.log ("Kathmandu")
+default:
+console.log("Incorrect city")
+}
+
+
+//Program 3
+
+let city2 = "surat"
+switch (city2){
+case "pune":
+case "nagpur":
+console.log ("MH")
+break;
+case "jaipur":
+case "udaipur":
+console.log ("RJ")
+break;
+case "indore":
+case "bhopal":
+console.log ("MP")
+break;
+case "surat":
+case "ahemdabad":
+console.log("GJ")
+break;
+default:
+console.log ("Incorrect city")
+}
+
+
+//Program 4
+
+let a = 100
+let b  = 200
+let c = 300
+
+let flag = true
+
+switch (flag){
+    case a > b && a > c:
+        console.log ("x is greater")
+    break;
+    case b > a && b > c:
+        console.log ("y is greater")
+    default:
+        console.log("z is greater")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

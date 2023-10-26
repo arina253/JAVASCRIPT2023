@@ -1,0 +1,163 @@
+
+//Destructure of Array and object
+
+let names = ["arina","jyoti","roshini","sony"]
+ let a = names[0]
+ let b = names[1]
+ let c = names[2]
+ let d = names[3]
+
+ console.log(a)
+ console.log(b)
+ console.log(c)
+ console.log(d)
+
+ //Destructure : Need [] to destructure array
+
+ //Program 1
+
+ let [x1,x2,x3,x4] = names
+ console.log(x1)
+ console.log(x2)
+ console.log(x3)
+ console.log(x4)
+
+
+ //Program 2
+
+ let city = ["pune","goa","delhi","mysore"]
+ let [m1,m2,m3,m4]=city
+ console.log (m1)
+ console.log (m2)
+ console.log (m3)
+ console.log (m4)
+
+
+ //Program 3 - Array inside the array
+
+ //                   0                  1                     2
+
+ let states = [["nagpur","pune"],["jaipur","udaipur"],["indore","bhopal"]]
+ console.log (states[0])
+ console.log(states[1])
+ console.log(states[2])
+
+ let [[c11,c22],[c33,c44],[c55,c66]] = states
+ console.log(c22)
+console.log(c55)
+
+
+//Program 4
+
+
+//               0          1          2
+//             0  1  2    0  1  2    0  1  2            
+let marks = [[10,20,30],[40,50,60],[70,80,90]]
+
+//console.log(marks[0])
+//console.log (marks[1])
+//console.log (marks[2])
+
+let [[b11,b22,b33],[b44,b55,b66],[b77,b88,b99]] = marks
+console.log(b55)
+console.log(b88)
+
+
+
+//Program 4 - Destructure of object
+//Object do not store the value by index
+//Need {} to destructure object and we have to give property name
+
+let info = {
+    firstName : "arina",
+    lastName  : "joshi",
+    rollNo : 30
+}
+
+let n1 = info.firstName
+let n2 = info.lastName
+let n3 = info.rollNo
+console.log(n1,n2,n3)        //arina joshi 30
+
+let {firstName,lastName,rollNo} = info
+console.log(firstName)
+console.log(lastName)
+console.log(rollNo)
+
+
+//Program 5
+
+let vehicle = {
+    color : "red",
+    type : "sedane"
+}
+
+let {color:c1, type:ty} = vehicle
+// console.log (color)
+// console.log(type)
+console.log (c1)
+console.log (ty)
+
+
+//Program 6 -----Object under Object
+
+let info2 = {
+    fullName : "ari shrestha",
+    parent : {
+        mother :"sabi shrestha",
+        father : "gobin shrestha"
+    }
+}
+
+// console.log (info2.fullName)
+// console.log(info2.parent.mother)
+// console.log (info2.parent.father)
+
+let {fullName,parent : {mother, father }} = info2
+console.log(fullName)
+console.log (mother)
+console.log (father)
+
+
+//Program 7 -Array under the object
+
+let students = [
+    {
+        fn : "arina",
+        ln : " joshi"
+    },
+    {
+        fn : "jyoti",
+        ln : "baidya"
+
+    },
+    {
+        fn : "roshini",
+        ln : "amatya"
+
+    }
+]
+
+    let [
+        {fn:f11,ln:l11},
+        {fn:f22,ln:l22},
+        {fn:f33,ln:l33}
+        ]= students
+    console.log (f33)
+    console.log (l22)
+
+
+    //Program 8----Object under the array
+
+    let info3 = {
+        fullName :"amol rao",
+        age : 32,
+        skills : ["sql","java","python"]
+    }
+
+    let {fullName :k1, age : k2, skills : [k3a,k3b,k3c]} = info3 
+    console.log(k3a)
+    console.log (k3c)
+
+
+

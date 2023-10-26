@@ -1,0 +1,93 @@
+
+//flat------to flatten the array. The output should be the subarrays followed by the flattened array.
+
+//                 0             1            2
+//               0  1  2   0  1  2  0   1   2   3
+let numbers = [[22,33,44],[55,66,77],[88,99,100]]
+console.log (numbers[0])
+console.log(numbers[1])
+let q1 = numbers.flat ()
+console.log(q1)        // Prints: [ 22, 33, 44, 55, 66, 77, 88, 99, 100 ]
+
+
+
+//slice-----allows you to extract a portion of an array and create a new array from it. 
+
+//              0    1      2     3      4
+let names = ["ram","sam","hari","rita","gita"]
+//             -5    -4    -3     -2     -1
+
+//Syntax:names.slice(startPosition, endPosition(not inclusive))
+
+console.log(names.slice(2));     // Prints: ["hari", "rita", "gita"]
+console.log(names.slice(1, 4));  // Prints: ["sam", "hari", "rita"]
+console.log(names.slice(2, -1)); // Prints: ["hari", "rita"]
+console.log(names.slice(-5, -1)); // Prints: ["ram", "sam", "hari", "rita"]
+console.log(names.slice(-5, 4));  // Prints: ["ram", "sam", "hari", "rita"]
+console.log(names.slice(1, -5));  // Prints: []
+
+
+//splice()--------to change the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+//             0      1        2        3       4
+
+let city = ["pune","nagpur","mumbai","bhopal","texas"]
+
+//city.pop()--------remove last element of array
+//city.shift()------remove first element of array
+//city.splice(startIndex,number of elements to be deleted)
+
+//console.log (city.splice(1,2))
+console.log (city.splice(3,2))      //[ 'bhopal', 'texas' ]
+console.log(city)
+
+city.splice(3,2, "jaipur","udaipur")
+console.log (city)                 //[ 'pune', 'nagpur', 'mumbai', 'jaipur', 'udaipur' ]
+
+
+//at
+
+
+let fruits = ["banana","mango","orange","guava"]
+ let f1 = fruits.at(2)
+ console.log (f1)      //orange
+
+
+ //concat()
+
+ let q2 = [22,33,44]
+ let q3 = [33,77,99]
+
+ console.log(q2.concat(q3))
+ console.log (q3.concat(q2))
+
+
+ let namee = ["ram","sam","hari","mohan"]
+ let name2 = ["sita","gita","rita","saru"]
+ let names3 = namee.concat(name2)
+ console.log(names3)
+
+
+ //join()
+
+ let info = ["arina","joshi", 37, 9803753479]
+ q6 = info.join(" ")
+ console.log(q6)               //arina joshi 37 9803753479
+ console.log (typeof q6)      // string
+
+
+ //fill
+
+
+ let marks = [90,91,45,34,56,67]
+
+ marks.fill("what to fill","startIndex","endIndex(not inclusive)")
+ let q7 = marks.fill("1",3,6)
+ console.log(q7)       //[ 90, 91, 45, '1', '1', '1' ]
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+  
+
+//Comparison between array and object
+
+//Defining array------Array is used to store more than one value in a single memory.                
+//                    Array is not descriptive
+//                    Array stores the value by index.
+
+let info = ["arina","joshi",35,67]
+console.log (info)
+
+
+//Creating object------descriptive------key-value
+//Object doesn't store the value by index. but in the form of key-value pairs
+//Object------key  :  value
+//       property  : value
+
+let info2={
+    firstName:"arina",
+    lastName:"joshi",
+    age : 23,
+    rollNo : 67
+}
+
+console.log(info2)
+
+
+//Four operations in Array
+
+let names = ["ram","sam","hari","mohan","sohan"]
+console.log (names)
+
+//retrieve
+console.log(names[0])
+console.log(names[1])
+
+//update
+names[0] = "ramita"
+console.log(names)
+
+// Add elements
+names.push("ganesh");   // Adds "ganesh" to the end of the array
+names.unshift("ganesh"); // Adds "ganesh" to the beginning of the array
+console.log(names);     // Prints the array after additions
+
+
+console.log(names.push("ganesh")); // Pushes "ganesh" to the end and prints the new length of the array
+console.log(names);               // Prints the array after pushing "ganesh"
+
+
+//delete elements
+
+names.pop()
+names.shift()
+names.splice(2,1)
+
+console.log(names.pop())
+console.log (names.shift())
+names.splice(2,1)
+console.log(names.splice(2,1))
+
+
+//Looping array
+
+let fruits = ["apple", "mango", "banana"]
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(i)
+    console.log(fruits[i])
+}
+
+//*************************************************************************************************************************************
+
+
+//Object
+
+let vehicle = {
+    color : "red",
+    type : "SUV",
+    model : "Q4"
+}
+
+//console.log(vehicle[0])     //Prints undefined since object in javascript do not store the value by index
+
+//Four operation on Object
+
+//retrieve (.notation and bracket notation)
+ 
+  console.log(vehicle.color)
+  console.log (vehicle['color'])
+
+
+  //update (.notation and bracket notation)--------update an existing property of an object by assigning a new value to it.
+ 
+  vehicle.color = "blue"
+  vehicle['color'] = "purple"
+  console.log(vehicle)
+
+
+  //add (.notation and bracket notation)-------add new properties to an object by simply assigning a value to a new property key. 
+
+  vehicle.start = "automation"
+  vehicle['city']= "yetkha"
+  console.log (vehicle)
+
+
+  //delete (.notation and bracket notation )
+
+  delete vehicle.color
+  delete vehicle['type']
+  console.log(vehicle)
+

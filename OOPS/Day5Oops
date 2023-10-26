@@ -1,0 +1,102 @@
+//Object literal 
+
+//Program 1
+
+let arina = {
+    firstName : "arina",
+    lastName : "joshi",
+    age : 40,
+    rollNo : 8,
+    display : function(){
+        console.log(this.firstName + " " + this.lastName)
+    }
+}
+
+let amol = {
+    firstName : "amol",
+    lastName : "rao",
+    age : 20,
+    rollNo : 18,
+    display : function(){
+        console.log(this.firstName + " " + this.lastName)
+    }
+}
+
+console.log(arina.firstName)
+console.log(amol.lastName)
+
+arina.display()
+amol.display()
+
+//3 ways of creating object
+
+//Method1
+//function constructor
+function PersonC (fn,ln,age,rollNo){
+    this.firstName = fn
+    this.lastName = ln
+    this.age = age
+    this.rollNo = rollNo
+    this.display = function(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+
+let arina2 = new PersonC("arina2","joshi2",40,8,)
+arina2.display()
+let amol2 = new PersonC ("amol2","rao2",20,8)
+amol2.display()
+console.log(amol2)
+
+
+//Method2
+//Es6 class
+
+// let amol = {
+//     firstName : "amol",
+//     lastName : "rao",
+//     age : 20,
+//     rollNo : 18,
+//     display : function(){
+//         console.log(this.firstName + this.lastName)
+//     }
+// }
+
+class PersonD {
+    constructor(fn, ln, age, rollNo){
+    this.firstName = fn
+    this.lastName = ln
+    this.age = age
+    this.rollNo = rollNo
+    this.display = function(){
+        console.log(this.firstName + this.lastName)
+    }
+    }
+}
+
+
+let amol3 = new PersonD ("amol3","rao3",20,8)
+amol3.display()
+let amol4 = new PersonD("amol4", "rao4",23,66)
+amol4.display()
+
+
+//Method 3
+//Object.create()
+
+let amol5 = Object.create({})
+console.log(amol5) 
+
+amol5.firstName = "amol5"
+amol5.lastName = "rao5"
+amol5.age = 20
+amol5.rollNo = 43
+amol5.display = function(){
+    console.log(this.firstName + " " + this.lastName)
+}
+
+console.log(amol5)
+amol5.display()
+
+
+

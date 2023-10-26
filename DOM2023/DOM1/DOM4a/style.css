@@ -1,0 +1,26 @@
+h1{
+    color : red
+}
+
+li{
+    color : red
+}
+
+.fruit{
+    color : green
+}
+
+.veg{
+    color : yellow
+}
+
+#one{
+    color: brown
+}
+
+h2{
+    color : black;
+    background-color: rgb(243, 240, 255);
+    width : 200px ;
+    height: 200 px;
+}
